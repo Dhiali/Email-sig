@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Signature</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            
+        }
+
+        .email-signature {
+            width: 700px;
+            height: auto;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+            border-radius: 2px;
+            border: 4px solid rgb(255, 255, 255);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            
+        }
+
+        .info {
+            flex: 1;
+            position: relative;
+            font-family: "Roboto", serif;
+            font-size: 23px;
+            padding-top: 16px;
+            padding-left: 30px;
+        }
+
+        .info p {
+            margin: 5px 0;
+            font-family: "Roboto", serif;
+            font-size: 15px;
+        }
+
+        /* Small line under Director */
+        .info p.position {
+            margin: 5px 0;
+            padding-bottom: 8px; /* Add padding below the text */
+            border-bottom: 1.5px solid #fff; /* White line */
+            width: 25px;
+        }
+
+        /* Contact Information */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            padding-left: 0px;
+        }
+
+        .contact-info div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .contact-info img {
+            width: 22px;
+            height: 22px;
+            margin-right: 10px;
+        }
+
+        .contact-info p {
+            margin: 0;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .profile-image {
+            flex: 0 0 60%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2; /* Ensures the GIF is above the white rectangle */
+            position: absolute;
+            top: 48%;
+            left: 49%;
+            transform: translate(-50%, -50%);
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .social-icons {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .white-box {
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background-color: #fff;
+            color: #000;
+            width: 350px;
+            height: 100px;
+            border-radius: 0 2px 0 2px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            z-index: 1; /* Places the white rectangle behind the GIF */
+            box-sizing: border-box;
+        }
+
+        .white-box p {
+            margin: 0;
+            width: 100px;
+            height: 100px;
+        }
+
+        .white-box p:first-child {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Added padding for the image */
+        .white-box img {
+            width: 80%;  /* Adjust the width of the image */
+            height: auto;
+            padding: 35px;  /* Padding to ensure it's not touching the sides */
+            object-fit: contain;
+        }
+        .social-icons {
+    display: flex;
+    flex-direction: row; /* Arrange icons in a row */
+    justify-content: flex-start;
+    gap: 20px; /* Add spacing between the icons */
+    margin-top: 180px; /* Position the icons under the white box */
+    padding-left: 50px; /* Add padding for alignment */
+}
+
+        
+    </style>
+</head>
+<body>
+    <div class="email-signature">
+        <!-- White Box on Top Right -->
+        <div class="white-box"> 
+            <img src="https://outrite.africa/wp-content/uploads/2021/06/Outrite-Africa-Logo-2020-e1737811288267.jpg" alt="Profile GIF" >
+        </div>
+
+        <!-- Left Info -->
+        <div class="info">
+            <strong>Eveshwin Chetty</strong>
+            <p class="position">Director</p> <!-- Added class for line under Director -->
+            
+            <!-- Contact Information under Director -->
+            <div class="contact-info">
+                <div>
+                    <img src="https://outrite.africa/wp-content/uploads/2025/01/phone-call.png" alt="Phone">
+                    <p>+27 84 500 4645</p>
+                </div>
+                <div>
+                    <img src="https://outrite.africa/wp-content/uploads/2025/01/web-1.png" alt="Web">
+                    <p>www.outrite.africa</p>
+                </div>
+                <div>
+                    <img src="https://outrite.africa/wp-content/uploads/2025/01/email-2.png" alt="Email">
+                    <p>eveshwin@outrite.africa</p>
+                </div>
+                <div>
+                    <img src="https://outrite.africa/wp-content/uploads/2025/01/letter-b.png" alt="Location">
+                    <p>B - BBEE: Level 1 - 100% Black Ownership - EME</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Image (GIF) -->
+        <div class="profile-image">
+            <img src="https://outrite.africa/wp-content/uploads/2025/01/Comp1_1-ezgif.com-effects.gif" alt="Profile GIF">
+        </div>
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+            <a href="https://www.facebook.com/outriteafrica/" target="_blank">
+                <img src="https://outrite.africa/wp-content/uploads/2025/01/facebook-1.png" alt="Facebook">
+            </a>
+            <a href="https://www.linkedin.com/company/outrite-africa/" target="_blank">
+                <img src="https://outrite.africa/wp-content/uploads/2025/01/linkedin.png" alt="LinkedIn">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
